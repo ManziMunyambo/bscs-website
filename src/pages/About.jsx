@@ -12,7 +12,7 @@ const TEAM_MEMBERS = [
   { role: "Outreach Lead", name: "Nifemi Koleosho" },
   { role: "Strategy Lead", name: "Edima Essien" },
   { role: "Secretary", name: "Iyanuoluwa Adegboyega" },
-  { role: "Head of Marketing and Communication", name: "Kalkidan Wubshet" },
+  { role: "Head of Marketing and Communication", name: "Ogheneovo" },
 ];
 
 function About() {
@@ -120,14 +120,6 @@ function TeamCard({ member }) {
       <h2>{member.role}</h2>
       <p>{member.name}</p>
     </article>
-  );
-}
-
-export default About;
-      </main>
-
-      <Footer />
-    </div>
   );
 }
 
