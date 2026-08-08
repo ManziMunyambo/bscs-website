@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -11,7 +12,7 @@ const TEAM_MEMBERS = [
   { role: "Outreach Lead", name: "Nifemi Koleosho" },
   { role: "Strategy Lead", name: "Edima Essien" },
   { role: "Secretary", name: "Iyanuoluwa Adegboyega" },
-  { role: "Head of Marketing and Communication", name: "Kalkidan Wubshet" },
+  { role: "Head of Marketing and Communication", name: "Ogheneovo" },
 ];
 
 function About() {
@@ -85,19 +86,40 @@ function About() {
 
         <div className="team-members-grid">
           {TEAM_MEMBERS.map((member) => (
-            <article className="team-card" key={member.name}>
-              <div className="team-photo">
-                <span>Photo</span>
-              </div>
-              <h2>{member.role}</h2>
-              <p>{member.name}</p>
-            </article>
+            <TeamCard key={member.name} member={member} />
           ))}
         </div>
       </main>
 
       <Footer />
     </div>
+  );
+}
+
+function TeamCard({ member }) {
+  const [loaded, setLoaded] = useState(false);
+  const [errored, setErrored] = useState(false);
+
+  const photoPath = member.photo || `/team/${member.name
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '')}.jpg`;
+
+  return (
+    <article className="team-card">
+      <div className="team-photo">
+        <img
+          src={photoPath}
+          alt={member.name}
+          onLoad={() => setLoaded(true)}
+          onError={() => setErrored(true)}
+          style={{ display: errored ? 'none' : 'block' }}
+        />
+        {!loaded && !errored && <span className="team-photo__placeholder">Photo</span>}
+      </div>
+      <h2>{member.role}</h2>
+      <p>{member.name}</p>
+    </article>
   );
 }
 
