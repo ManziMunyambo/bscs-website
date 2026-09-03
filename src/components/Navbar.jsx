@@ -30,6 +30,9 @@ function Navbar({ transparent = false }) {
           <Link to="/events" onClick={() => setIsOpen(false)}>
             Events
           </Link>
+          <Link to="/socials" onClick={() => setIsOpen(false)}>
+            Socials
+          </Link>
         </nav>
       </div>
     </header>
