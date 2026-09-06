@@ -33,6 +33,9 @@ function Navbar({ transparent = false }) {
         </button>
 
         <nav className={`nav-links ${isOpen ? "open" : ""}`}>
+          <Link to="/" onClick={() => setIsOpen(false)}>
+            Home
+          </Link>
           <Link to="/about" onClick={() => setIsOpen(false)}>
             About
           </Link>

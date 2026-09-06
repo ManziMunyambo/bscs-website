@@ -13,6 +13,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="/socials" element={<Socials />} />
+        <Route path="/walksafe-privacy" element={<WalkSafePrivacy />} />
+        <Route path="/walksafe-support" element={<WalkSafeSupport />} />
       </Routes>
     </BrowserRouter>
   );
