@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import bscsLogo from "../assets/BSCS-logo-trans.png";
 
 function Navbar({ transparent = false }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,10 +8,17 @@ function Navbar({ transparent = false }) {
   return (
     <header className={`navbar${transparent ? " navbar-transparent" : ""}`}>
       <div className="navbar-inner">
-        <Link to="/" className="logo" onClick={() => setIsOpen(false)}>
-          <img className="logo-mark" src="/BSCS%20Logo.svg" alt="" />
+        <Link to="/" className="logo flex items-center" onClick={() => setIsOpen(false)}>
+          <img 
+            src={bscsLogo}
+            alt="BSCS Logo"
+            className="h-16 w-auto object-contain"
+          />
+        </Link>        
+
+        { /* <Link to="/" className="logo" style={{ color: '#000000'}} onClick={() => setIsOpen(false)}>
           BSCS
-        </Link>
+        </Link> */}
 
         <button
           type="button"
@@ -33,6 +41,9 @@ function Navbar({ transparent = false }) {
           </Link>
           <Link to="/events" onClick={() => setIsOpen(false)}>
             Events
+          </Link>
+          <Link to="/socials" onClick={() => setIsOpen(false)}>
+            Socials
           </Link>
         </nav>
       </div>
