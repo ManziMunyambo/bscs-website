@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Events from "./pages/Events";
 import WalkSafePrivacy from "./pages/WalkSafePrivacy";
+import WalkSafeSupport from "./pages/WalkSafeSupport";
 import BecomeMember from "./pages/BecomeMember";
 import Socials from "./pages/Socials";
 import "./styles/site.css";
