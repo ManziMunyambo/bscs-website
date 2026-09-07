@@ -10,7 +10,7 @@ const TEAM_MEMBERS = [
   { role: "Head of Technology", name: "Manzi Munyambo", photoPosition: "center 30%" },
   { role: "Treasurer", name: "Samuel Obawole", photoPosition: "center 40%" },
   { role: "Outreach Lead", name: "Nifemi Koleosho", photoPosition: "center 30%" },
-  { role: "Strategy Lead", name: "Edima Essien", photoPosition: "center 30%" },
+  // { role: "Strategy Lead", name: "Edima Essien", photoPosition: "center 30%" },
   { role: "Secretary", name: "Iyanuoluwa Adegboyega", photoPosition: "center 30%" },
   { role: "Head of Marketing and Communication", name: "Ovo Akporeha", photoPosition: "center 20%" },
 ];
