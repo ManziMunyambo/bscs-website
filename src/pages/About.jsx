@@ -3,16 +3,16 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const TEAM_MEMBERS = [
-  { role: "Co-President", name: "Ewaoluwa Olakunle" },
-  { role: "Co-President", name: "Seun Samuel-Ipaye" },
-  { role: "Vice President", name: "Sura Gaafar" },
-  { role: "Events Lead", name: "Adedeji Adeboyejo" },
-  { role: "Head of Technology", name: "Manzi Munyambo" },
-  { role: "Treasurer", name: "Samuel Obawole" },
-  { role: "Outreach Lead", name: "Nifemi Koleosho" },
-  { role: "Strategy Lead", name: "Edima Essien" },
-  { role: "Secretary", name: "Iyanuoluwa Adegboyega" },
-  { role: "Head of Marketing and Communication", name: "Ovo Akporeha" },
+  { role: "Co-President", name: "Ewaoluwa Olakunle", photoPosition: "center 30%" },
+  { role: "Co-President", name: "Seun Samuel-Ipaye", photoPosition: "center 30%" },
+  { role: "Vice President", name: "Sura Gaafar", photoPosition: "center 50%" },
+  { role: "Events Lead", name: "Adedeji Adeboyejo", photoPosition: "center 30%" },
+  { role: "Head of Technology", name: "Manzi Munyambo", photoPosition: "center 30%" },
+  { role: "Treasurer", name: "Samuel Obawole", photoPosition: "center 40%" },
+  { role: "Outreach Lead", name: "Nifemi Koleosho", photoPosition: "center 30%" },
+  { role: "Strategy Lead", name: "Edima Essien", photoPosition: "center 30%" },
+  { role: "Secretary", name: "Iyanuoluwa Adegboyega", photoPosition: "center 30%" },
+  { role: "Head of Marketing and Communication", name: "Ovo Akporeha", photoPosition: "center 20%" },
 ];
 
 function About() {
@@ -113,7 +113,10 @@ function TeamCard({ member }) {
           alt={member.name}
           onLoad={() => setLoaded(true)}
           onError={() => setErrored(true)}
-          style={{ display: errored ? 'none' : 'block' }}
+          style={{
+            display: errored ? "none" : "block",
+            objectPosition: member.photoPosition,
+          }}
         />
         {!loaded && !errored && <span className="team-photo__placeholder">Photo</span>}
       </div>
