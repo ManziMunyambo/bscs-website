@@ -9,9 +9,8 @@ function Navbar({ transparent = false }) {
     <header className={`navbar${transparent ? " navbar-transparent" : ""}`}>
       <div className="navbar-inner">
         <Link to="/" className="logo" onClick={() => setIsOpen(false)}>
-          <img className="logo-mark" src="" alt="" />
-          BSCS
-        </Link> */}
+          <img className="logo-mark" src={bscsLogo} alt="BSCS logo" />
+        </Link>
 
         <button
           type="button"
