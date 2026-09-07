@@ -8,15 +8,8 @@ function Navbar({ transparent = false }) {
   return (
     <header className={`navbar${transparent ? " navbar-transparent" : ""}`}>
       <div className="navbar-inner">
-        <Link to="/" className="logo flex items-center" onClick={() => setIsOpen(false)}>
-          <img 
-            src={bscsLogo}
-            alt="BSCS Logo"
-            className="h-16 w-auto object-contain"
-          />
-        </Link>        
-
-        { /* <Link to="/" className="logo" style={{ color: '#000000'}} onClick={() => setIsOpen(false)}>
+        <Link to="/" className="logo" onClick={() => setIsOpen(false)}>
+          <img className="logo-mark" src="" alt="" />
           BSCS
         </Link> */}
 
